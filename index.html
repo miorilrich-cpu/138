@@ -32,9 +32,9 @@ tailwind.config = {
           dark: '#B39DDB'
         },
         brown: {
-          light: '#9575CD',
-          DEFAULT: '#7E57C2',
-          dark: '#5E35B1'
+          light: '#7E57C2',
+          DEFAULT: '#5E35B1',
+          dark: '#4A148C'
         }
       },
       boxShadow: {
@@ -49,7 +49,7 @@ tailwind.config = {
 <style>
 body {
   background-color: #FCF8FF;
-  color: #7E57C2;
+  color: #5E35B1;
 }
 ::-webkit-scrollbar {
   width: 8px;
@@ -153,8 +153,8 @@ body {
     <circle cx="8.5" cy="12" r="1.2" fill="#FCF8FF" />
     <circle cx="15.5" cy="12" r="1.2" fill="#FCF8FF" />
     <ellipse cx="12" cy="16.5" rx="4" ry="3" fill="#FCF8FF" />
-    <ellipse cx="12" cy="15" rx="1.5" ry="1" fill="#7E57C2" />
-    <path d="M12 16v1.5M10.5 18c.5.5 2.5.5 3 0" stroke="#7E57C2" stroke-width="1.2" fill="none" stroke-linecap="round" />
+    <ellipse cx="12" cy="15" rx="1.5" ry="1" fill="#5E35B1" />
+    <path d="M12 16v1.5M10.5 18c.5.5 2.5.5 3 0" stroke="#5E35B1" stroke-width="1.2" fill="none" stroke-linecap="round" />
   </symbol>
   <symbol id="icon-button" viewBox="0 0 100 100">
     <circle cx="50" cy="50" r="46" fill="#F3E5F5" />
@@ -177,22 +177,22 @@ body {
   
   <!-- BACKGROUND DECORATIONS -->
   <div class="absolute inset-0 pointer-events-none z-0 overflow-hidden opacity-70">
-    <svg class="absolute top-[2%] left-[8%] w-10 h-10 text-purpley-dark animate-float opacity-30" viewBox="0 0 24 24"><use href="#icon-teddy"></use></svg>
+    <svg class="absolute top-[2%] left-[8%] w-10 h-10 text-brown animate-float opacity-30" viewBox="0 0 24 24"><use href="#icon-teddy"></use></svg>
     <svg class="absolute top-[7%] right-[12%] w-9 h-9 animate-float-delayed opacity-60" viewBox="0 0 100 100"><use href="#icon-button"></use></svg>
     <svg class="absolute top-[12%] left-[30%] w-6 h-6 text-pinky opacity-30 animate-float-reverse" viewBox="0 0 24 24"><use href="#icon-heart-cute"></use></svg>
-    <svg class="absolute top-[20%] right-[5%] w-14 h-14 text-purpley-dark animate-float opacity-20" viewBox="0 0 24 24"><use href="#icon-teddy"></use></svg>
+    <svg class="absolute top-[20%] right-[5%] w-14 h-14 text-brown animate-float opacity-20" viewBox="0 0 24 24"><use href="#icon-teddy"></use></svg>
     <svg class="absolute top-[26%] left-[6%] w-10 h-10 animate-float-delayed opacity-50" viewBox="0 0 100 100"><use href="#icon-button"></use></svg>
     <svg class="absolute top-[38%] left-[50%] w-7 h-7 text-pinky-light opacity-60 animate-float-reverse" viewBox="0 0 24 24"><use href="#icon-heart-cute"></use></svg>
-    <svg class="absolute top-[43%] left-[4%] w-12 h-12 text-purpley-dark animate-float opacity-30" viewBox="0 0 24 24"><use href="#icon-teddy"></use></svg>
+    <svg class="absolute top-[43%] left-[4%] w-12 h-12 text-brown animate-float opacity-30" viewBox="0 0 24 24"><use href="#icon-teddy"></use></svg>
     <svg class="absolute top-[48%] right-[10%] w-11 h-11 animate-float-delayed opacity-70" viewBox="0 0 100 100"><use href="#icon-button"></use></svg>
-    <svg class="absolute top-[65%] right-[6%] w-12 h-12 text-purpley-dark animate-float-slow opacity-20" viewBox="0 0 24 24"><use href="#icon-teddy"></use></svg>
+    <svg class="absolute top-[65%] right-[6%] w-12 h-12 text-brown animate-float-slow opacity-20" viewBox="0 0 24 24"><use href="#icon-teddy"></use></svg>
     <svg class="absolute top-[70%] left-[12%] w-8 h-8 animate-float-reverse opacity-60" viewBox="0 0 100 100"><use href="#icon-button"></use></svg>
-    <svg class="absolute top-[85%] left-[6%] w-11 h-11 text-purpley-dark animate-float-delayed opacity-30" viewBox="0 0 24 24"><use href="#icon-teddy"></use></svg>
+    <svg class="absolute top-[85%] left-[6%] w-11 h-11 text-brown animate-float-delayed opacity-30" viewBox="0 0 24 24"><use href="#icon-teddy"></use></svg>
     <svg class="absolute top-[82%] right-[22%] w-6 h-6 text-pinky opacity-40 animate-float" viewBox="0 0 24 24"><use href="#icon-heart-cute"></use></svg>
     <svg class="absolute top-[92%] right-[8%] w-12 h-12 animate-float-reverse opacity-70" viewBox="0 0 100 100"><use href="#icon-button"></use></svg>
   </div>
 
-  <!-- Header / Hero Section (เปลี่ยนชื่อร้าน Miori Shop และเวลาทำการ) -->
+  <!-- Header / Hero Section -->
   <header class="bg-gradient-to-r from-pinky-light via-purpley-light to-cream pt-10 pb-8 px-6 relative rounded-b-[40px] shadow-sm z-10 border-b-4 border-white flex items-center gap-5 overflow-hidden">
     <div class="shrink-0 relative group cursor-pointer hover:scale-105 transition-transform duration-300">
       <svg class="absolute -top-3 -left-3 w-10 h-10 opacity-70 -rotate-12 z-0" viewBox="0 0 100 100"><use href="#icon-button"></use></svg>
@@ -200,12 +200,12 @@ body {
         <img src="logo1.png" alt="Miori Shop Logo" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/150x150/FFF0F5/B39DDB?text=Miori';">
       </div>
       <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-sm border-2 border-pinky-light group-hover:rotate-12 transition-transform z-20">
-        <i data-lucide="heart" class="w-4 h-4 text-purpley-dark fill-purpley-dark"></i>
+        <i data-lucide="heart" class="w-4 h-4 text-brown fill-brown"></i>
       </div>
     </div>
     <div class="flex-1 text-left relative z-10">
       <div class="flex items-center gap-2 mb-1 opacity-80">
-        <i data-lucide="star" class="w-4 h-4 text-purpley-dark fill-purpley-dark" stroke-width="1.5"></i>
+        <i data-lucide="star" class="w-4 h-4 text-brown fill-brown" stroke-width="1.5"></i>
         <i data-lucide="sparkles" class="w-4 h-4 text-pinky" stroke-width="1.5"></i>
       </div>
       <h1 class="text-[34px] leading-tight font-bold text-brown mb-2 relative">Miori Shop</h1>
@@ -218,10 +218,10 @@ body {
   <!-- Main Content -->
   <main class="px-6 py-8 space-y-12 relative z-10">
 
-    <!-- Intro & Badges (อัปเดตข้อมูลต้อนรับ + 3 Badges ใหม่) -->
+    <!-- Intro & Badges -->
     <section class="text-center space-y-3 relative">
-      <h2 class="text-xl font-medium flex items-center justify-center gap-2 text-brown">
-        <i data-lucide="sparkles" class="w-5 h-5 text-purpley-dark"></i>
+      <h2 class="text-xl font-bold flex items-center justify-center gap-2 text-brown">
+        <i data-lucide="sparkles" class="w-5 h-5 text-brown"></i>
         ร้านมิโอริยินดีต้อนรับค่า
       </h2>
       <p class="text-sm leading-relaxed text-brown-light">
@@ -229,60 +229,60 @@ body {
         ไม่จำกัดข้อมูลการใส่ อยากได้อะไรสั่งมาได้เลย<br>
         ทางเราออกแบบการจัดวางให้ค่า
       </p>
-      <!-- Badges (ปุ่มกลมเล็กๆ ด้านบน - อัปเดตข้อความใหม่) -->
+      <!-- Badges -->
       <div class="flex flex-wrap justify-center gap-2 mt-3">
-        <span class="text-xs bg-white border border-purpley-dark/40 text-brown px-3 py-1 rounded-full shadow-sm hover:scale-105 transition-transform cursor-pointer">รับทำลายน้ำ</span>
-        <span class="text-xs bg-white border border-purpley-dark/40 text-brown px-3 py-1 rounded-full shadow-sm hover:scale-105 transition-transform cursor-pointer">รับทำป้าย</span>
-        <span class="text-xs bg-white border border-purpley-dark/40 text-brown px-3 py-1 rounded-full shadow-sm hover:scale-105 transition-transform cursor-pointer">รับดึงเข้ากลุ่ม</span>
+        <span class="text-xs bg-white border border-brown/40 text-brown px-3 py-1 rounded-full shadow-sm hover:scale-105 transition-transform cursor-pointer font-medium">รับทำลายน้ำ</span>
+        <span class="text-xs bg-white border border-brown/40 text-brown px-3 py-1 rounded-full shadow-sm hover:scale-105 transition-transform cursor-pointer font-medium">รับทำป้าย</span>
+        <span class="text-xs bg-white border border-brown/40 text-brown px-3 py-1 rounded-full shadow-sm hover:scale-105 transition-transform cursor-pointer font-medium">รับดึงเข้ากลุ่ม</span>
       </div>
     </section>
 
     <!-- Portfolio Section -->
     <section class="bg-gradient-to-b from-pinky-light/60 to-purpley-light/60 rounded-3xl p-6 relative shadow-card border border-white">
       <svg class="absolute top-4 right-4 w-9 h-9 rotate-45 drop-shadow-sm opacity-60" viewBox="0 0 100 100"><use href="#icon-button"></use></svg>
-      <h2 class="text-xl font-medium mb-4 mt-2 text-center flex items-center justify-center gap-2 text-brown">
-        <i data-lucide="layout-grid" class="w-5 h-5 text-purpley-dark"></i>
+      <h2 class="text-xl font-bold mb-4 mt-2 text-center flex items-center justify-center gap-2 text-brown">
+        <i data-lucide="layout-grid" class="w-5 h-5 text-brown"></i>
         ตัวอย่างผลงาน
       </h2>
       <p class="text-xs text-center text-brown-light mb-5">คลิกที่หมวดหมู่เพื่อดูลิงก์ตัวอย่าง</p>
       
-      <!-- สี่เหลี่ยมจัตุรัสมนๆ 6 ช่อง แนวนอน 3 แนวตั้ง 2 -->
+      <!-- สี่เหลี่ยมจัตุรัสมนๆ 6 ช่อง -->
       <div class="grid grid-cols-3 gap-3 relative z-10">
         <button onclick="openModal('bright')" class="aspect-square bg-white hover:bg-pinky-light border-2 border-purpley-light rounded-2xl p-2 flex flex-col items-center justify-center shadow-sm group transition-all hover:scale-105">
           <div class="w-9 h-9 rounded-xl bg-cream border border-pinky-light flex items-center justify-center mb-1">
-            <i data-lucide="sun" class="w-5 h-5 text-purpley-dark"></i>
+            <i data-lucide="sun" class="w-5 h-5 text-brown"></i>
           </div>
-          <span class="font-medium text-xs text-brown group-hover:text-purpley-dark text-center">สดใส</span>
+          <span class="font-medium text-xs text-brown group-hover:text-brown-dark text-center">สดใส</span>
         </button>
         <button onclick="openModal('dark')" class="aspect-square bg-white hover:bg-pinky-light border-2 border-purpley-light rounded-2xl p-2 flex flex-col items-center justify-center shadow-sm group transition-all hover:scale-105">
           <div class="w-9 h-9 rounded-xl bg-purpley-light flex items-center justify-center mb-1">
-            <i data-lucide="moon" class="w-5 h-5 text-purpley-dark"></i>
+            <i data-lucide="moon" class="w-5 h-5 text-brown"></i>
           </div>
-          <span class="font-medium text-xs text-brown group-hover:text-purpley-dark text-center">โทนมืด</span>
+          <span class="font-medium text-xs text-brown group-hover:text-brown-dark text-center">โทนมืด</span>
         </button>
         <button onclick="openModal('pastel')" class="aspect-square bg-white hover:bg-pinky-light border-2 border-purpley-light rounded-2xl p-2 flex flex-col items-center justify-center shadow-sm group transition-all hover:scale-105">
           <div class="w-9 h-9 rounded-xl bg-pinky-light flex items-center justify-center mb-1">
-            <i data-lucide="palette" class="w-5 h-5 text-purpley-dark"></i>
+            <i data-lucide="palette" class="w-5 h-5 text-brown"></i>
           </div>
-          <span class="font-medium text-xs text-brown group-hover:text-purpley-dark text-center">พาสเทล</span>
+          <span class="font-medium text-xs text-brown group-hover:text-brown-dark text-center">พาสเทล</span>
         </button>
         <button onclick="openModal('bright')" class="aspect-square bg-white hover:bg-pinky-light border-2 border-purpley-light rounded-2xl p-2 flex flex-col items-center justify-center shadow-sm group transition-all hover:scale-105">
           <div class="w-9 h-9 rounded-xl bg-cream border border-pinky-light flex items-center justify-center mb-1">
-            <i data-lucide="sparkles" class="w-5 h-5 text-purpley-dark"></i>
+            <i data-lucide="sparkles" class="w-5 h-5 text-brown"></i>
           </div>
-          <span class="font-medium text-xs text-brown group-hover:text-purpley-dark text-center">มินิมอล</span>
+          <span class="font-medium text-xs text-brown group-hover:text-brown-dark text-center">มินิมอล</span>
         </button>
         <button onclick="openModal('pastel')" class="aspect-square bg-white hover:bg-pinky-light border-2 border-purpley-light rounded-2xl p-2 flex flex-col items-center justify-center shadow-sm group transition-all hover:scale-105">
           <div class="w-9 h-9 rounded-xl bg-pinky-light flex items-center justify-center mb-1">
-            <i data-lucide="heart" class="w-5 h-5 text-purpley-dark"></i>
+            <i data-lucide="heart" class="w-5 h-5 text-brown"></i>
           </div>
-          <span class="font-medium text-xs text-brown group-hover:text-purpley-dark text-center">น่ารัก</span>
+          <span class="font-medium text-xs text-brown group-hover:text-brown-dark text-center">น่ารัก</span>
         </button>
         <button onclick="openModal('dark')" class="aspect-square bg-white hover:bg-pinky-light border-2 border-purpley-light rounded-2xl p-2 flex flex-col items-center justify-center shadow-sm group transition-all hover:scale-105">
           <div class="w-9 h-9 rounded-xl bg-purpley-light flex items-center justify-center mb-1">
-            <i data-lucide="star" class="w-5 h-5 text-purpley-dark"></i>
+            <i data-lucide="star" class="w-5 h-5 text-brown"></i>
           </div>
-          <span class="font-medium text-xs text-brown group-hover:text-purpley-dark text-center">คลาสสิก</span>
+          <span class="font-medium text-xs text-brown group-hover:text-brown-dark text-center">คลาสสิก</span>
         </button>
       </div>
     </section>
@@ -294,60 +294,60 @@ body {
       </div>
     </section>
 
-    <!-- ปุ่มเช็คคิวงานข้างล่างแบรนเนอร์ (อัปเดตลิงก์ใหม่) -->
+    <!-- ปุ่มเช็คคิวงานข้างล่างแบรนเนอร์ -->
     <section class="space-y-3">
       <!-- ซ่อนช่องสถานะคิวงานผ่าน CSS เพื่อไม่ให้ลบ HTML Element เดิม -->
       <div class="hidden bg-white border-2 border-pinky-light rounded-2xl p-4 shadow-sm items-center justify-between">
         <div class="flex items-center gap-2">
           <span class="relative flex h-3 w-3">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purpley opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-3 w-3 bg-purpley-dark"></span>
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-brown"></span>
           </span>
           <span class="text-xs font-medium text-brown">สถานะคิวงาน: เปิดรับคิวปรกติ</span>
         </div>
-        <span class="text-[10px] bg-pinky-light text-purpley-dark px-2 py-0.5 rounded-full font-medium">ว่าง 3 คิว</span>
+        <span class="text-[10px] bg-pinky-light text-brown px-2 py-0.5 rounded-full font-medium">ว่าง 3 คิว</span>
       </div>
 
-      <!-- ปุ่มเช็คคิวงานแบบเส้นประ (ลิงก์ Google Sheets ใหม่) -->
-      <a href="https://docs.google.com/spreadsheets/d/1-FdSIRlWdqaiypReK_ER95wd8PWxHJHZpHq2tXZRt6Q/edit?usp=drivesdk" target="_blank" class="w-full py-3 px-4 rounded-2xl border-2 border-dashed border-purpley-dark bg-cream hover:bg-purpley-light/50 transition-colors flex items-center justify-center gap-2 text-brown font-medium text-sm shadow-sm group">
-        <i data-lucide="calendar-check" class="w-5 h-5 text-purpley-dark group-hover:scale-110 transition-transform"></i>
+      <!-- ปุ่มเช็คคิวงานแบบเส้นประ -->
+      <a href="https://docs.google.com/spreadsheets/d/1-FdSIRlWdqaiypReK_ER95wd8PWxHJHZpHq2tXZRt6Q/edit?usp=drivesdk" target="_blank" class="w-full py-3 px-4 rounded-2xl border-2 border-dashed border-brown bg-cream hover:bg-purpley-light/50 transition-colors flex items-center justify-center gap-2 text-brown font-semibold text-sm shadow-sm group">
+        <i data-lucide="calendar-check" class="w-5 h-5 text-brown group-hover:scale-110 transition-transform"></i>
         <span>เช็คคิวงานตรงนี้</span>
       </a>
     </section>
 
-    <!-- Pricing Web Design (อัปเดตราคาทำป้ายเริ่มต้น) -->
+    <!-- Pricing Web Design -->
     <section class="relative">
-      <h2 class="text-xl font-medium mb-4 flex items-center gap-2 border-b-2 border-purpley-light pb-2 text-brown">
-        <i data-lucide="receipt" class="w-5 h-5 text-purpley-dark"></i>
+      <h2 class="text-xl font-bold mb-4 flex items-center gap-2 border-b-2 border-purpley-light pb-2 text-brown">
+        <i data-lucide="receipt" class="w-5 h-5 text-brown"></i>
         ราคาทำป้ายเริ่มต้น
       </h2>
       <div class="bg-white rounded-3xl shadow-card p-6 space-y-4 border-2 border-purpley-light relative">
         <svg class="absolute top-4 right-4 w-8 h-8 -rotate-12 drop-shadow-sm" viewBox="0 0 100 100"><use href="#icon-button"></use></svg>
-        <svg class="absolute top-1/2 -left-3 w-8 h-8 text-purpley-dark bg-white rounded-full drop-shadow-sm p-1" viewBox="0 0 24 24"><use href="#icon-heart-cute"></use></svg>
+        <svg class="absolute top-1/2 -left-3 w-8 h-8 text-brown bg-white rounded-full drop-shadow-sm p-1" viewBox="0 0 24 24"><use href="#icon-heart-cute"></use></svg>
         
         <div class="flex items-end justify-between border-b border-dashed border-purpley/50 pb-3 relative z-10">
           <div>
-            <span class="block font-medium text-xl text-purpley-dark">Start</span>
+            <span class="block font-bold text-xl text-brown">Start</span>
             <span class="text-[11px] text-brown-light">ลายน้ำน่ารักๆ ไว้ใส่ในตัวอย่างสินค้าเท่านั้น</span>
           </div>
-          <span class="text-2xl font-semibold text-brown">39.-</span>
+          <span class="text-2xl font-bold text-brown">39.-</span>
         </div>
 
-        <p class="font-medium text-xs text-purpley-dark pt-1 relative z-10">เรทราคาต่างๆ</p>
+        <p class="font-semibold text-xs text-brown pt-1 relative z-10">เรทราคาต่างๆ</p>
         <ul class="space-y-2.5 text-xs relative z-10">
-          <li class="flex justify-between items-center bg-cream p-2.5 rounded-lg"><span class="text-brown">ป้ายแนวน่ารัก</span> <span class="font-medium text-brown">เริ่มต้น 59.-</span></li>
-          <li class="flex justify-between items-center bg-cream p-2.5 rounded-lg"><span class="text-brown">ป้ายแนวสว่าง</span> <span class="font-medium text-brown">เริ่มต้น 89.-</span></li>
-          <li class="flex justify-between items-center bg-cream p-2.5 rounded-lg"><span class="text-brown">ป้ายแนวมืด</span> <span class="font-medium text-brown">เริ่มต้น 89.-</span></li>
-          <li class="flex justify-between items-center bg-cream p-2.5 rounded-lg"><span class="text-brown">ป้ายเรทราคา</span> <span class="font-medium text-brown">เริ่มต้น 99.-</span></li>
+          <li class="flex justify-between items-center bg-cream p-2.5 rounded-lg"><span class="text-brown">ป้ายแนวน่ารัก</span> <span class="font-semibold text-brown">เริ่มต้น 59.-</span></li>
+          <li class="flex justify-between items-center bg-cream p-2.5 rounded-lg"><span class="text-brown">ป้ายแนวสว่าง</span> <span class="font-semibold text-brown">เริ่มต้น 89.-</span></li>
+          <li class="flex justify-between items-center bg-cream p-2.5 rounded-lg"><span class="text-brown">ป้ายแนวมืด</span> <span class="font-semibold text-brown">เริ่มต้น 89.-</span></li>
+          <li class="flex justify-between items-center bg-cream p-2.5 rounded-lg"><span class="text-brown">ป้ายเรทราคา</span> <span class="font-semibold text-brown">เริ่มต้น 99.-</span></li>
         </ul>
 
         <div class="bg-purpley-light/40 rounded-xl p-3 text-xs border border-purpley-light relative z-10">
-          <p class="font-medium mb-1 flex items-center gap-1 text-brown"><i data-lucide="plus-circle" class="w-4 h-4 text-purpley-dark"></i> Add on เพิ่มเติม</p>
+          <p class="font-semibold mb-1 flex items-center gap-1 text-brown"><i data-lucide="plus-circle" class="w-4 h-4 text-brown"></i> Add on เพิ่มเติม</p>
           <p class="text-brown-light ml-1 font-medium">มีราคาเหมา 3 ป้ายขึ้นไป</p>
         </div>
 
         <div class="text-[11px] text-brown-light space-y-1.5 pt-2 relative z-10">
-          <p class="flex items-start gap-1"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5 text-purpley-dark shrink-0"></i> <span>แก้ไขข้อมูลหลังส่งตรวจสอบ ฟรี 1 ครั้ง</span></p>
+          <p class="flex items-start gap-1"><i data-lucide="check" class="w-3.5 h-3.5 mt-0.5 text-brown shrink-0"></i> <span>แก้ไขข้อมูลหลังส่งตรวจสอบ ฟรี 1 ครั้ง</span></p>
           <div class="flex items-start gap-1">
             <i data-lucide="info" class="w-3.5 h-3.5 mt-0.5 text-brown shrink-0"></i>
             <div>
@@ -361,7 +361,7 @@ body {
           </div>
         </div>
 
-        <p class="text-[10px] text-purpley-dark/90 italic pt-1 relative z-10 border-t border-purpley-light/50">
+        <p class="text-[10px] text-brown-light italic pt-1 relative z-10 border-t border-purpley-light/50">
           หมายเหตุ: ราคาขึ้นอยู่กับความละเอียดของข้อมูลและปริมาณเนื้อหา ทางร้านขอสงวนสิทธิ์ในการประเมินราคาตามความเหมาะสมนะคะ
         </p>
       </div>
@@ -396,102 +396,108 @@ body {
       </div>
     </section>
 
-    <!-- Rules & Process (อัปเดตขั้นตอนและเงื่อนไข / RULES) -->
-    <section class="grid grid-cols-1 gap-4">
-      <div class="bg-white rounded-2xl p-5 shadow-sm border border-purpley-light relative overflow-hidden">
-        <svg class="absolute -right-3 -bottom-3 w-12 h-12 opacity-50" viewBox="0 0 100 100"><use href="#icon-button"></use></svg>
-        <h3 class="font-medium mb-3 flex items-center gap-1.5 text-sm text-brown relative z-10">
-          <i data-lucide="clipboard-list" class="w-4 h-4 text-purpley-dark shrink-0"></i> ขั้นตอนและเงื่อนไข
-        </h3>
-        <ul class="text-[11px] text-brown-light space-y-2 list-disc list-inside relative z-10 leading-relaxed">
-          <li>ตามปกติรองาน 4–8 ชั่วโมง แล้วแต่คิวของวันนั้น ๆ</li>
-          <li class="text-purpley-dark font-medium">งานเร่ง *2 ของราคา</li>
-          <li>แจ้งรายละเอียดงานให้ครบก่อนเริ่มงาน</li>
-          <li>เน้นย้ำหลังจากส่งงานให้รีเช็ค ตอบกลับภายในไม่เกิน 30 นาที</li>
-          <li>หากส่งงานเรียบร้อยแล้ว ลูกค้าต้องการปรับเปลี่ยนงาน ต้องสั่งใหม่เท่านั้น</li>
-          <li>หากทางร้านทำผิดบรีฟจะทำการแก้ไขให้ฟรี</li>
-          <li class="text-purpley-dark font-medium">ห้ามนำไฟล์งานหรือองค์ประกอบภายในงานไปแจกต่อ ขายต่อ หรือส่งต่อให้บุคคลอื่นโดยไม่ได้รับอนุญาต</li>
-          <li>การสั่งงานถือว่ายอมรับเงื่อนไขของร้านแล้ว กรุณาอ่านรายละเอียดให้ครบก่อนสั่งงานนะคะ</li>
-        </ul>
-        <p class="text-[10px] text-purpley-dark/90 italic mt-3 pt-2 border-t border-purpley-light/50 relative z-10">
-          หมายเหตุ ลูกค้าต้องการอะไรพิมพ์บอกให้ชัดเจน เพราะทางร้านจะทำตามข้อความบรีพที่ลูกค้าแจ้งมา
-        </p>
+    <!-- Rules & Process (แสดงคู่กัน 2 คอลัมน์ เหมือนภาพตัวอย่าง) -->
+    <section class="space-y-2">
+      <div class="grid grid-cols-2 gap-3.5">
+        <!-- กรอบซ้าย: ขั้นตอน -->
+        <div class="bg-white rounded-2xl p-4 shadow-sm border-2 border-purpley-light relative overflow-hidden flex flex-col justify-between">
+          <svg class="absolute -right-3 -bottom-3 w-10 h-10 opacity-30 pointer-events-none" viewBox="0 0 100 100"><use href="#icon-button"></use></svg>
+          <div>
+            <h3 class="font-bold mb-3 flex items-center gap-1.5 text-sm text-brown relative z-10">
+              <i data-lucide="clipboard-list" class="w-4 h-4 text-brown shrink-0"></i> ขั้นตอน
+            </h3>
+            <ul class="text-[11px] text-brown-light space-y-2 list-disc list-inside relative z-10 leading-snug">
+              <li>รองานปกติ 4–8 ชม.</li>
+              <li>งานเร่ง *2 ของราคา</li>
+              <li>แจ้งบรีฟงานให้ครบถ้วน</li>
+              <li>รีเช็คงานใน 30 นาที</li>
+              <li>แก้ไขฟรีถ้าทำผิดบรีฟ</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- กรอบขวา: กฎของร้าน -->
+        <div class="bg-white rounded-2xl p-4 shadow-sm border-2 border-purpley-light relative overflow-hidden flex flex-col justify-between">
+          <svg class="absolute -right-2 -bottom-2 w-8 h-8 text-pinky-light/40 pointer-events-none" viewBox="0 0 24 24"><use href="#icon-heart-cute"></use></svg>
+          <div>
+            <h3 class="font-bold mb-3 flex items-center gap-1.5 text-sm text-brown relative z-10">
+              <i data-lucide="shield-alert" class="w-4 h-4 text-brown shrink-0"></i> กฎของร้าน
+            </h3>
+            <ul class="text-[11px] text-brown-light space-y-2 list-disc list-inside relative z-10 leading-snug">
+              <li>โอนแล้วไม่คืนเงินทุกกรณี</li>
+              <li>ยกเลิกหลังตรวจ ไม่คืนเงิน</li>
+              <li>ไม่รับทำตามแบบร้านอื่น</li>
+              <li>งดตัดป้ายร้านอื่นมาทำ</li>
+              <li>งดจิก/เร่งงานทุกกรณี</li>
+            </ul>
+          </div>
+        </div>
       </div>
 
-      <div class="bg-white rounded-2xl p-5 shadow-sm border border-purpley-light relative overflow-hidden">
-        <svg class="absolute -right-2 -bottom-2 w-10 h-10 text-pinky-light/30" viewBox="0 0 24 24"><use href="#icon-heart-cute"></use></svg>
-        <h3 class="font-medium mb-3 flex items-center gap-1.5 text-sm text-brown relative z-10">
-          <i data-lucide="shield-alert" class="w-4 h-4 text-purpley-dark shrink-0"></i> RULES
-        </h3>
-        <ul class="text-[11px] text-brown-light space-y-2 list-disc list-inside relative z-10 leading-relaxed">
-          <li class="text-purpley-dark font-medium">โอนเงินแล้วไม่คืนเงินทุกกรณี ไม่ว่าจะราคาเริ่มต้น หรือ จ่ายเต็มแล้ว</li>
-          <li>ยกเลิกหลังตรวจงานแล้ว ไม่คืนเงิน และส่งงานให้ตามปกติ</li>
-          <li>ทางร้านไม่รับทำตามแบบของงานร้านอื่น</li>
-          <li>งดตัดป้ายร้านอื่นมาทำกับร้านเค้า</li>
-          <li>งดจิกงดเร่งทุกกรณีนะคะ</li>
-          <li class="text-purpley-dark font-medium">สำคัญ งดนำป้ายไปขาย แจก ดัดแปลง หรือ เจน หรือเข้าระบบ Ai เพราะงานทุกชิ้นมีลิขสิทธิ์ หากตรวจพบการละเมิด ทางร้านขอดำเนินคดีตามกฎหมาย</li>
-        </ul>
-      </div>
+      <!-- หมายเหตุลิขสิทธิ์เล็กๆ ด้านล่าง -->
+      <p class="text-[9.5px] text-brown-light text-center leading-relaxed px-2 italic pt-1">
+        หมายเหตุ: งดนำป้ายไปขาย แจก ดัดแปลง หรือ เจน หรือเข้าระบบ Ai เพราะงานทุกชิ้นมีลิขสิทธิ์ หากตรวจพบการละเมิด ทางร้านขอดำเนินคดีตามกฎหมาย
+      </p>
     </section>
 
     <!-- ปุ่มช่องทางการโอนเงิน ข้างล่างขั้นตอน และกฎของร้าน -->
     <section>
-      <button onclick="openPaymentModal()" class="w-full bg-white hover:bg-purpley-light/50 border-2 border-purpley-dark text-brown py-3.5 px-5 rounded-2xl font-medium text-sm shadow-card flex items-center justify-between transition-all hover:scale-[1.02]">
+      <button onclick="openPaymentModal()" class="w-full bg-white hover:bg-purpley-light/50 border-2 border-brown text-brown py-3.5 px-5 rounded-2xl font-semibold text-sm shadow-card flex items-center justify-between transition-all hover:scale-[1.02]">
         <div class="flex items-center gap-3">
           <div class="w-9 h-9 rounded-xl bg-pinky-light flex items-center justify-center">
-            <i data-lucide="qr-code" class="w-5 h-5 text-purpley-dark"></i>
+            <i data-lucide="qr-code" class="w-5 h-5 text-brown"></i>
           </div>
-          <span class="text-brown font-semibold">ช่องทางการโอนเงิน</span>
+          <span class="text-brown font-bold">ช่องทางการโอนเงิน</span>
         </div>
-        <i data-lucide="chevron-right" class="w-5 h-5 text-purpley-dark"></i>
+        <i data-lucide="chevron-right" class="w-5 h-5 text-brown"></i>
       </button>
     </section>
 
-    <!-- Work parts (คงไว้ 100%) -->
-    <section class="bg-white rounded-3xl p-5 border-2 border-dashed border-purpley-dark/50 shadow-sm text-center">
-      <h3 class="font-medium text-brown text-sm flex items-center justify-center gap-1.5">
-        <i data-lucide="sparkles" class="w-4 h-4 text-purpley-dark"></i> Work parts
+    <!-- Work parts -->
+    <section class="bg-white rounded-3xl p-5 border-2 border-dashed border-brown/50 shadow-sm text-center">
+      <h3 class="font-bold text-brown text-sm flex items-center justify-center gap-1.5">
+        <i data-lucide="sparkles" class="w-4 h-4 text-brown"></i> Work parts
       </h3>
       <!-- ข้อความใต้หัวข้อ Work parts -->
-      <p class="text-[10px] text-purpley-dark/80 font-medium italic mt-0.5 mb-4">เลือกชิ้นส่วนประกอบงานตรงนี้</p>
+      <p class="text-[10px] text-brown-light font-medium italic mt-0.5 mb-4">เลือกชิ้นส่วนประกอบงานตรงนี้</p>
 
       <div class="grid grid-cols-3 gap-3">
-        <!-- โพลารอยด์ 1: ̊+‧꒰ა Block ໒꒱ ‧+ ̊ -->
-        <a href="https://drive.google.com/drive/folders/14eGRjufzjTVdgKFyZKAZL_Ucotuq3WIu?usp=drive_link" target="_blank" class="bg-white hover:bg-pinky-light/30 border border-purpley-dark/20 rounded-xl p-2 pb-2.5 shadow-polaroid flex flex-col items-center justify-between transition-all hover:scale-105 hover:-rotate-2 active:scale-95 group">
+        <!-- โพลารอยด์ 1 -->
+        <a href="https://drive.google.com/drive/folders/14eGRjufzjTVdgKFyZKAZL_Ucotuq3WIu?usp=drive_link" target="_blank" class="bg-white hover:bg-pinky-light/30 border border-brown/20 rounded-xl p-2 pb-2.5 shadow-polaroid flex flex-col items-center justify-between transition-all hover:scale-105 hover:-rotate-2 active:scale-95 group">
           <div class="w-full aspect-square bg-cream rounded-lg border border-purpley-light flex items-center justify-center mb-2">
-            <i data-lucide="dog" class="w-7 h-7 text-brown group-hover:text-purpley-dark transition-colors"></i>
+            <i data-lucide="dog" class="w-7 h-7 text-brown group-hover:text-brown-dark transition-colors"></i>
           </div>
-          <span class="text-[10px] font-semibold text-brown group-hover:text-purpley-dark transition-colors leading-tight px-1"> ̊+‧꒰ა Block ໒꒱ ‧+  ̊</span>
+          <span class="text-[10px] font-semibold text-brown group-hover:text-brown-dark transition-colors leading-tight px-1"> ̊+‧꒰ა Block ໒꒱ ‧+  ̊</span>
         </a>
 
-        <!-- โพลารอยด์ 2: ̊+‧꒰ა Toon ໒꒱ ‧+ ̊ -->
-        <a href="https://drive.google.com/drive/folders/1EfG87-_uhPZ9wCeZAtnV3FKJgdzJO57H?usp=drive_link" target="_blank" class="bg-white hover:bg-pinky-light/30 border border-purpley-dark/20 rounded-xl p-2 pb-2.5 shadow-polaroid flex flex-col items-center justify-between transition-all hover:scale-105 hover:rotate-2 active:scale-95 group">
+        <!-- โพลารอยด์ 2 -->
+        <a href="https://drive.google.com/drive/folders/1EfG87-_uhPZ9wCeZAtnV3FKJgdzJO57H?usp=drive_link" target="_blank" class="bg-white hover:bg-pinky-light/30 border border-brown/20 rounded-xl p-2 pb-2.5 shadow-polaroid flex flex-col items-center justify-between transition-all hover:scale-105 hover:rotate-2 active:scale-95 group">
           <div class="w-full aspect-square bg-cream rounded-lg border border-purpley-light flex items-center justify-center mb-2">
-            <i data-lucide="cat" class="w-7 h-7 text-brown group-hover:text-purpley-dark transition-colors"></i>
+            <i data-lucide="cat" class="w-7 h-7 text-brown group-hover:text-brown-dark transition-colors"></i>
           </div>
-          <span class="text-[10px] font-semibold text-brown group-hover:text-purpley-dark transition-colors leading-tight px-1"> ̊+‧꒰ა Toon ໒꒱ ‧+  ̊</span>
+          <span class="text-[10px] font-semibold text-brown group-hover:text-brown-dark transition-colors leading-tight px-1"> ̊+‧꒰ა Toon ໒꒱ ‧+  ̊</span>
         </a>
 
-        <!-- โพลารอยด์ 3: ̊+‧꒰ა Descor ໒꒱ ‧+ ̊ -->
-        <a href="https://drive.google.com/drive/folders/1TPvtkQKp89HgEYJCHPVzOlMqwElLID9Y?usp=drive_link" target="_blank" class="bg-white hover:bg-pinky-light/30 border border-purpley-dark/20 rounded-xl p-2 pb-2.5 shadow-polaroid flex flex-col items-center justify-between transition-all hover:scale-105 hover:-rotate-2 active:scale-95 group">
+        <!-- โพลารอยด์ 3 -->
+        <a href="https://drive.google.com/drive/folders/1TPvtkQKp89HgEYJCHPVzOlMqwElLID9Y?usp=drive_link" target="_blank" class="bg-white hover:bg-pinky-light/30 border border-brown/20 rounded-xl p-2 pb-2.5 shadow-polaroid flex flex-col items-center justify-between transition-all hover:scale-105 hover:-rotate-2 active:scale-95 group">
           <div class="w-full aspect-square bg-cream rounded-lg border border-purpley-light flex items-center justify-center mb-2">
-            <i data-lucide="piggy-bank" class="w-7 h-7 text-brown group-hover:text-purpley-dark transition-colors"></i>
+            <i data-lucide="piggy-bank" class="w-7 h-7 text-brown group-hover:text-brown-dark transition-colors"></i>
           </div>
-          <span class="text-[10px] font-semibold text-brown group-hover:text-purpley-dark transition-colors leading-tight px-1"> ̊+‧꒰ა Descor ໒꒱ ‧+  ̊</span>
+          <span class="text-[10px] font-semibold text-brown group-hover:text-brown-dark transition-colors leading-tight px-1"> ̊+‧꒰ა Descor ໒꒱ ‧+  ̊</span>
         </a>
       </div>
     </section>
 
     <!-- ซ่อนส่วน Web Course ผ่าน CSS เพื่อไม่ให้ลบ HTML Element เดิม -->
     <section class="hidden bg-white rounded-3xl p-6 text-center relative shadow-card border-2 border-purpley/50">
-      <svg class="absolute -left-3 -top-3 w-10 h-10 text-purpley-dark opacity-30 -rotate-12 z-20" viewBox="0 0 24 24"><use href="#icon-teddy"></use></svg>
+      <svg class="absolute -left-3 -top-3 w-10 h-10 text-brown opacity-30 -rotate-12 z-20" viewBox="0 0 24 24"><use href="#icon-teddy"></use></svg>
       <svg class="absolute right-4 bottom-4 w-10 h-10 rotate-45 opacity-30" viewBox="0 0 100 100"><use href="#icon-button"></use></svg>
       <h2 class="text-xl font-medium mb-2 flex items-center justify-center gap-2 relative z-10 text-brown">
-        <i data-lucide="laptop" class="w-5 h-5 shrink-0 text-purpley-dark"></i>
+        <i data-lucide="laptop" class="w-5 h-5 shrink-0 text-brown"></i>
         คอร์สสอนทำเว็บสไตล์ทิ้งจู
       </h2>
       <p class="text-sm text-brown-light mb-4 relative z-10">สอนตั้งแต่ 0 จนทำเป็นเว็บใช้งานได้จริง<br>มีเทมเพลตให้กว่า 5 แบบ แทบจะจับมือสอน</p>
-      <div class="inline-block bg-pinky-light/50 border border-pinky-light text-purpley-dark font-semibold px-5 py-1.5 rounded-full text-sm mb-5 shadow-sm relative z-10">
+      <div class="inline-block bg-pinky-light/50 border border-pinky-light text-brown font-semibold px-5 py-1.5 rounded-full text-sm mb-5 shadow-sm relative z-10">
         ราคาพิเศษ 299.- <span class="line-through text-brown-light text-xs ml-1 font-normal">399.-</span>
       </div>
       <div class="flex flex-col gap-2 relative z-10">
@@ -499,7 +505,7 @@ body {
           <i data-lucide="folder-open" class="w-4 h-4 shrink-0"></i> ดูรายละเอียดคอร์ส
         </a>
         <a href="https://purple-wind-aced.cozyw75.workers.dev/" target="_blank" class="bg-cream border border-purpley text-brown text-xs py-2.5 px-4 rounded-xl hover:bg-pinky-light/50 transition flex items-center justify-center gap-2 shadow-sm">
-          <i data-lucide="book-open" class="w-4 h-4 text-purpley-dark shrink-0"></i> อ่านกฎก่อนเข้าคอร์ส
+          <i data-lucide="book-open" class="w-4 h-4 text-brown shrink-0"></i> อ่านกฎก่อนเข้าคอร์ส
         </a>
       </div>
     </section>
@@ -564,17 +570,17 @@ body {
 
   </main>
 
-  <!-- Footer / Contact Us (FACEBOOK และ LINE) -->
+  <!-- Footer / Contact Us -->
   <footer class="bg-cream pt-10 pb-12 px-6 rounded-t-[40px] text-center mt-2 relative z-10 border-t-2 border-purpley-light shadow-[0_-10px_20px_-5px_rgba(225,190,231,0.4)]">
-    <h2 class="text-[15px] font-bold mb-6 mt-2 tracking-wider text-[#7E57C2] flex items-center justify-center gap-2 uppercase">
-      CONTACT US <i data-lucide="heart" class="w-4 h-4 text-purpley-dark fill-purpley-dark"></i>
+    <h2 class="text-[15px] font-bold mb-6 mt-2 tracking-wider text-brown flex items-center justify-center gap-2 uppercase">
+      CONTACT US <i data-lucide="heart" class="w-4 h-4 text-brown fill-brown"></i>
     </h2>
     <div class="flex flex-col items-center gap-3 mb-10">
       <div class="flex justify-center gap-3 w-full max-w-[280px]">
-        <a href="https://www.facebook.com/share/19jHFiaJMn/?mibextid=wwXIfr" target="_blank" class="flex-1 bg-[#B39DDB] text-white py-3 rounded-full text-[11px] font-bold tracking-wider hover:-translate-y-1 transition-transform shadow-md flex justify-center items-center uppercase">
+        <a href="https://www.facebook.com/share/19jHFiaJMn/?mibextid=wwXIfr" target="_blank" class="flex-1 bg-brown text-white py-3 rounded-full text-[11px] font-bold tracking-wider hover:-translate-y-1 transition-transform shadow-md flex justify-center items-center uppercase">
           FACEBOOK
         </a>
-        <a href="https://lin.ee/XkF46in" target="_blank" class="flex-1 bg-white border-[1.5px] border-[#B39DDB] text-[#B39DDB] py-3 rounded-full text-[11px] font-bold tracking-wider hover:-translate-y-1 transition-transform shadow-md flex justify-center items-center uppercase">
+        <a href="https://lin.ee/XkF46in" target="_blank" class="flex-1 bg-white border-[1.5px] border-brown text-brown py-3 rounded-full text-[11px] font-bold tracking-wider hover:-translate-y-1 transition-transform shadow-md flex justify-center items-center uppercase">
           LINE
         </a>
       </div>
@@ -584,7 +590,7 @@ body {
       </a>
     </div>
     <p class="text-[13px] font-medium text-brown flex items-center justify-center gap-1.5 italic">
-      ขอบคุณที่ไว้วางใจ Miori Shop <i data-lucide="star" class="w-3.5 h-3.5 text-purpley-dark fill-pinky-light opacity-80"></i>
+      ขอบคุณที่ไว้วางใจ Miori Shop <i data-lucide="star" class="w-3.5 h-3.5 text-brown fill-pinky-light opacity-80"></i>
     </p>
   </footer>
 
@@ -593,9 +599,9 @@ body {
 <!-- Modal Portfolio -->
 <div id="portfolioModal" class="modal fixed inset-0 z-[100] flex items-center justify-center bg-brown-dark/30 backdrop-blur-sm invisible opacity-0 p-4">
   <div class="modal-content bg-white w-full max-w-[90vw] sm:max-w-sm rounded-[30px] shadow-2xl overflow-hidden flex flex-col max-h-[85vh] border-4 border-purpley-light relative">
-    <svg class="absolute -top-4 -right-3 w-12 h-12 text-purpley-dark opacity-50 rotate-12 drop-shadow-sm z-10" viewBox="0 0 24 24"><use href="#icon-teddy"></use></svg>
+    <svg class="absolute -top-4 -right-3 w-12 h-12 text-brown opacity-50 rotate-12 drop-shadow-sm z-10" viewBox="0 0 24 24"><use href="#icon-teddy"></use></svg>
     <div id="modalHeaderBg" class="p-5 flex justify-between items-center bg-pinky-light relative">
-      <h3 id="modalTitle" class="font-medium text-lg flex items-center gap-2 text-brown">
+      <h3 id="modalTitle" class="font-bold text-lg flex items-center gap-2 text-brown">
         <span>หัวข้อ</span>
       </h3>
       <button onclick="closeModal('portfolioModal')" class="w-8 h-8 shrink-0 bg-white/50 hover:bg-white rounded-full flex items-center justify-center transition-colors relative z-10">
@@ -603,7 +609,7 @@ body {
       </button>
     </div>
     <div class="p-5 overflow-y-auto custom-scrollbar flex-1 bg-cream relative">
-      <svg class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 text-purpley-dark opacity-10 pointer-events-none" viewBox="0 0 24 24"><use href="#icon-teddy"></use></svg>
+      <svg class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 text-brown opacity-10 pointer-events-none" viewBox="0 0 24 24"><use href="#icon-teddy"></use></svg>
       <div id="modalLinks" class="space-y-3 relative z-10"></div>
     </div>
     <div class="h-5 bg-cream flex justify-center pb-2 relative overflow-hidden">
@@ -615,10 +621,10 @@ body {
 <!-- Modal Payment -->
 <div id="paymentModal" class="modal fixed inset-0 z-[100] flex items-center justify-center bg-brown-dark/30 backdrop-blur-sm invisible opacity-0 p-4">
   <div class="modal-content bg-white w-full max-w-[90vw] sm:max-w-sm rounded-[30px] shadow-2xl overflow-hidden flex flex-col border-4 border-purpley-light relative">
-    <!-- แถบหัวข้อปรับให้บางลง -->
+    <!-- แถบหัวข้อ -->
     <div class="py-2.5 px-4 flex justify-between items-center bg-purpley-light border-b border-purpley/30 relative">
-      <h3 class="font-medium text-sm flex items-center gap-2 text-brown">
-        <i data-lucide="qr-code" class="w-4 h-4 text-purpley-dark"></i>
+      <h3 class="font-bold text-sm flex items-center gap-2 text-brown">
+        <i data-lucide="qr-code" class="w-4 h-4 text-brown"></i>
         <span>ช่องทางการโอนเงิน</span>
       </h3>
       <button onclick="closeModal('paymentModal')" class="w-6 h-6 shrink-0 bg-white/50 hover:bg-white rounded-full flex items-center justify-center transition-colors relative z-10">
@@ -627,62 +633,62 @@ body {
     </div>
     
     <div class="p-4 text-center bg-cream space-y-3 max-h-[75vh] overflow-y-auto">
-      <!-- รูป QR Code ในกรอบเส้นปรุ -->
-      <div class="bg-white p-2.5 rounded-2xl inline-block shadow-sm border-2 border-dashed border-purpley-dark/40">
+      <!-- รูป QR Code -->
+      <div class="bg-white p-2.5 rounded-2xl inline-block shadow-sm border-2 border-dashed border-brown/40">
         <img src="https://placehold.co/200x200/FFF0F5/B39DDB?text=QR+CODE" alt="QR Code" class="w-36 h-36 mx-auto object-contain">
       </div>
 
       <!-- ข้อความชื่อบัญชี อยู่ใต้กรอบรูป QR Code -->
       <div class="-mt-1 text-center space-y-0.5">
         <p class="text-xs font-bold text-brown">ชื่อบัญชี “คนสวย” เท่านั้น</p>
-        <p class="text-[9.5px] text-purpley-dark font-medium">เช็คชื่อบัญชีก่อนโอน</p>
+        <p class="text-[9.5px] text-brown-light font-medium">เช็คชื่อบัญชีก่อนโอน</p>
       </div>
       
-      <!-- รายละเอียดบัญชีธนาคาร (กรอบเส้นธรรมดา) -->
-      <div class="bg-white p-2.5 rounded-2xl border border-purpley-dark/30 text-left space-y-1 shadow-sm">
+      <!-- รายละเอียดบัญชีธนาคาร -->
+      <div class="bg-white p-2.5 rounded-2xl border border-brown/30 text-left space-y-1 shadow-sm">
         <div class="flex items-center gap-1.5">
-          <i data-lucide="building-2" class="w-3.5 h-3.5 text-purpley-dark"></i>
-          <p class="text-[11px] font-semibold text-purpley-dark">ธนาคารกสิกรไทย (K-Bank)</p>
+          <i data-lucide="building-2" class="w-3.5 h-3.5 text-brown"></i>
+          <p class="text-[11px] font-semibold text-brown">ธนาคารกสิกรไทย (K-Bank)</p>
         </div>
         <div class="flex items-center justify-between">
           <span class="font-bold text-brown text-xs tracking-wider">xxx-x-xxxxx-x</span>
-          <button onclick="navigator.clipboard.writeText('xxx-x-xxxxx-x'); alert('คัดลอกเลขบัญชีธนาคารแล้ว!');" class="bg-pinky-light hover:bg-pinky text-purpley-dark text-[10px] px-2 py-0.5 rounded-md font-medium transition-colors">
+          <button onclick="navigator.clipboard.writeText('xxx-x-xxxxx-x'); alert('คัดลอกเลขบัญชีธนาคารแล้ว!');" class="bg-pinky-light hover:bg-pinky text-brown text-[10px] px-2 py-0.5 rounded-md font-semibold transition-colors">
             คัดลอก
           </button>
         </div>
-        <p class="text-[10px] text-brown font-medium">ชื่อบัญชี: คนสวย</p>
+        <p class="text-[10px] text-brown-light font-medium">ชื่อบัญชี: คนสวย</p>
       </div>
 
-      <!-- TrueMoney Wallet (กรอบเส้นธรรมดา) -->
-      <div class="bg-white p-2.5 rounded-2xl border border-purpley-dark/30 text-left space-y-1 shadow-sm">
+      <!-- TrueMoney Wallet -->
+      <div class="bg-white p-2.5 rounded-2xl border border-brown/30 text-left space-y-1 shadow-sm">
         <div class="flex items-center gap-1.5">
-          <i data-lucide="wallet" class="w-3.5 h-3.5 text-purpley-dark"></i>
-          <p class="text-[11px] font-semibold text-purpley-dark">TrueMoney Wallet (ทรูมันนี่)</p>
+          <i data-lucide="wallet" class="w-3.5 h-3.5 text-brown"></i>
+          <p class="text-[11px] font-semibold text-brown">TrueMoney Wallet (ทรูมันนี่)</p>
         </div>
         <div class="flex items-center justify-between">
           <span class="font-bold text-brown text-xs tracking-wider">0xx-xxx-xxxx</span>
-          <button onclick="navigator.clipboard.writeText('0xxxxxxxxx'); alert('คัดลอกเบอร์ TrueMoney Wallet แล้ว!');" class="bg-purpley-light hover:bg-purpley text-purpley-dark text-[10px] px-2 py-0.5 rounded-md font-medium transition-colors">
+          <button onclick="navigator.clipboard.writeText('0xxxxxxxxx'); alert('คัดลอกเบอร์ TrueMoney Wallet แล้ว!');" class="bg-purpley-light hover:bg-purpley text-brown text-[10px] px-2 py-0.5 rounded-md font-semibold transition-colors">
             คัดลอก
           </button>
         </div>
-        <p class="text-[10px] text-brown font-medium">ชื่อบัญชี: คนสวย</p>
+        <p class="text-[10px] text-brown-light font-medium">ชื่อบัญชี: คนสวย</p>
       </div>
 
       <!-- กรอบกำกับโน้ตสลิป + ข้อความหมายเหตุ -->
       <div class="space-y-1 pt-0.5">
-        <div class="bg-white p-2.5 rounded-2xl border border-purpley-dark/30 text-left space-y-1 shadow-sm">
+        <div class="bg-white p-2.5 rounded-2xl border border-brown/30 text-left space-y-1 shadow-sm">
           <div class="flex items-center gap-1.5">
-            <i data-lucide="file-text" class="w-3.5 h-3.5 text-purpley-dark"></i>
-            <p class="text-[11px] font-semibold text-purpley-dark">ข้อความกำกับโน้ตสลิป</p>
+            <i data-lucide="file-text" class="w-3.5 h-3.5 text-brown"></i>
+            <p class="text-[11px] font-semibold text-brown">ข้อความกำกับโน้ตสลิป</p>
           </div>
           <div class="flex items-center justify-between bg-cream px-2.5 py-1 rounded-xl border border-pinky-light">
             <span class="font-bold text-brown text-xs">โอนเงินให้คนสวย</span>
-            <button onclick="navigator.clipboard.writeText('โอนเงินให้คนสวย'); alert('คัดลอกข้อความโน้ตสลิปแล้ว!');" class="bg-pinky hover:bg-pinky-dark text-white text-[10px] px-2 py-0.5 rounded-md font-medium transition-colors shadow-sm">
+            <button onclick="navigator.clipboard.writeText('โอนเงินให้คนสวย'); alert('คัดลอกข้อความโน้ตสลิปแล้ว!');" class="bg-pinky hover:bg-pinky-dark text-white text-[10px] px-2 py-0.5 rounded-md font-semibold transition-colors shadow-sm">
               คัดลอก
             </button>
           </div>
         </div>
-        <p class="text-[9.5px] text-purpley-dark text-center font-medium italic">
+        <p class="text-[9.5px] text-brown-light text-center font-medium italic">
           หมายเหตุ : โน๊ตสลิปทุกครั้งก่อนโอนเงิน ลืมโน๊ตปรับ 5.-
         </p>
       </div>
@@ -701,7 +707,7 @@ const portfolioData = {
   bright: {
     title: "ตัวอย่างงาน โทนสดใส",
     icon: "sun",
-    colorClass: "bg-cream text-purpley-dark border border-pinky-light",
+    colorClass: "bg-cream text-brown border border-pinky-light",
     headerClass: "bg-pinky-light",
     links: [
       { name: "สดใสV.1 ยีนส์กระดุม", url: "https://jeans.cozyw75.workers.dev/" },
@@ -713,7 +719,7 @@ const portfolioData = {
   dark: {
     title: "ตัวอย่างงาน โทนมืด",
     icon: "moon",
-    colorClass: "bg-purpley-light text-purpley-dark",
+    colorClass: "bg-purpley-light text-brown",
     headerClass: "bg-purpley-light",
     links: [
       { name: "โทนมืดV.1", url: "https://pinkdark.cozyw75.workers.dev/" },
@@ -729,7 +735,7 @@ const portfolioData = {
   pastel: {
     title: "ตัวอย่างงาน พาสเทล",
     icon: "palette",
-    colorClass: "bg-pinky-light text-purpley-dark",
+    colorClass: "bg-pinky-light text-brown",
     headerClass: "bg-pinky-light",
     links: [
       { name: "พาสเทลV.1", url: "https://wish-uwu.cozyw75.workers.dev/" },
@@ -763,9 +769,9 @@ function openModal(category) {
         <div class="w-8 h-8 shrink-0 rounded-full flex items-center justify-center ${data.colorClass}">
           <i data-lucide="link" class="w-4 h-4"></i>
         </div>
-        <span class="font-medium text-brown group-hover:text-purpley-dark transition-colors line-clamp-1">${link.name}</span>
+        <span class="font-medium text-brown group-hover:text-brown-dark transition-colors line-clamp-1">${link.name}</span>
       </div>
-      <i data-lucide="external-link" class="w-4 h-4 text-purpley-dark opacity-50 shrink-0 group-hover:opacity-100 group-hover:scale-110 transition-all"></i>
+      <i data-lucide="external-link" class="w-4 h-4 text-brown opacity-50 shrink-0 group-hover:opacity-100 group-hover:scale-110 transition-all"></i>
     `;
     modalLinksContainer.appendChild(a);
   });
@@ -799,7 +805,7 @@ function closeModal(modalId) {
   });
 });
 
-// Music Toggle Logic พร้อมระบบสร้างโน้ตเพลงลอย
+// Music Toggle Logic
 let isPlaying = false;
 let noteInterval = null;
 
