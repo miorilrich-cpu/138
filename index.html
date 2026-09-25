@@ -80,7 +80,7 @@ body {
 }
 @keyframes float-reverse {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-15px) rotate(-8deg); }
+  50% { transform: translateY(15px) rotate(-8deg); }
 }
 @keyframes float-slow {
   0%, 100% { transform: translateY(0px) scale(1); }
@@ -91,10 +91,10 @@ body {
 .animate-float-reverse { animation: float-reverse 5s ease-in-out 1s infinite; }
 .animate-float-slow { animation: float-slow 6s ease-in-out infinite; }
 
-/* Animation สำหรับกุญแจซอลดุ๊กดิ๊กตอนเล่นเพลง */
+/* Animation สำหรับปุ่มเพลงดุ๊กดิ๊กตอนเล่นเพลง */
 @keyframes clef-bounce {
   0%, 100% { transform: scale(1) rotate(0deg); }
-  50% { transform: scale(1.15) rotate(12deg); }
+  50% { transform: scale(1.12) rotate(10deg); }
 }
 .animate-clef-playing {
   animation: clef-bounce 0.8s ease-in-out infinite;
@@ -118,7 +118,7 @@ body {
 .music-note {
   position: absolute;
   pointer-events: none;
-  color: #B39DDB;
+  color: #FFB7B2;
   font-size: 14px;
   font-weight: bold;
   animation: note-float 2s ease-out infinite;
@@ -130,11 +130,13 @@ body {
 <!-- Audio Element สำหรับเพลงภูมิหลัง -->
 <audio id="bgMusic" loop src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
 
-<!-- ปุ่มเปิดเพลง ไอคอนกุญแจซอลน่ารักๆ -->
-<div class="fixed top-4 right-4 z-50">
-  <button id="musicToggle" onclick="toggleMusic()" class="w-11 h-11 bg-white/90 backdrop-blur border-2 border-purpley-dark rounded-full shadow-lg flex items-center justify-center hover:scale-110 active:scale-95 transition-all group relative">
-    <div id="clefIcon" class="flex items-center justify-center text-purpley-dark transition-transform">
-      <i data-lucide="music" class="w-6 h-6"></i>
+<!-- ปุ่มเปิดเพลง สไตล์ในรูปภาพ (ย้ายลงมามุมซ้ายล่าง) -->
+<div class="fixed bottom-4 left-4 z-50">
+  <button id="musicToggle" onclick="toggleMusic()" class="w-12 h-12 bg-white rounded-full p-1 shadow-md border-2 border-[#FFC2D1] flex items-center justify-center hover:scale-110 active:scale-95 transition-all group relative">
+    <div class="w-full h-full rounded-full border-2 border-[#FFE5EC] bg-[#FFF0F5] flex items-center justify-center">
+      <div id="clefIcon" class="flex items-center justify-center text-[#FF8FAB] transition-transform">
+        <i data-lucide="music" class="w-5 h-5 stroke-[2.5]"></i>
+      </div>
     </div>
     <div id="notesContainer" class="absolute inset-0 pointer-events-none"></div>
   </button>
@@ -417,12 +419,12 @@ body {
       </button>
     </section>
 
-    <!-- Work parts (ดีไซน์โพลารอยด์ 3 รูป เหลี่ยมกลมมน ชื่อย้ายมาใต้ไอคอน) -->
+    <!-- Work parts (ดีไซน์โพลารอยด์ + ข้อความหมายเหตุใต้ปุ่ม) -->
     <section class="bg-white rounded-3xl p-5 border-2 border-dashed border-purpley-dark/50 shadow-sm text-center">
       <h3 class="font-medium text-brown mb-4 text-sm flex items-center justify-center gap-1.5">
         <i data-lucide="sparkles" class="w-4 h-4 text-purpley-dark"></i> Work parts
       </h3>
-      <div class="grid grid-cols-3 gap-3">
+      <div class="grid grid-cols-3 gap-3 mb-2">
         <!-- โพลารอยด์ 1: Block -->
         <button class="bg-white hover:bg-pinky-light/30 border border-purpley-dark/20 rounded-xl p-2 pb-2.5 shadow-polaroid flex flex-col items-center justify-between transition-all hover:scale-105 hover:-rotate-2 active:scale-95 group">
           <div class="w-full aspect-square bg-cream rounded-lg border border-purpley-light flex items-center justify-center mb-2">
@@ -447,6 +449,8 @@ body {
           <span class="text-xs font-semibold text-brown group-hover:text-purpley-dark transition-colors">Decor</span>
         </button>
       </div>
+      <!-- ข้อความเล็กๆ ใต้ Work parts -->
+      <p class="text-[10px] text-purpley-dark/80 font-medium italic mt-2">*เลือกชิ้นส่วนประกอบงานตรงนี้</p>
     </section>
 
     <!-- ซ่อนส่วน Web Course ผ่าน CSS เพื่อไม่ให้ลบ HTML Element เดิม -->
@@ -578,7 +582,7 @@ body {
   </div>
 </div>
 
-<!-- Modal Payment -->
+<!-- Modal Payment (แยกข้อความชื่อบัญชีออกมาใตักรอบ QR Code) -->
 <div id="paymentModal" class="modal fixed inset-0 z-[100] flex items-center justify-center bg-brown-dark/30 backdrop-blur-sm invisible opacity-0 p-4">
   <div class="modal-content bg-white w-full max-w-[90vw] sm:max-w-sm rounded-[30px] shadow-2xl overflow-hidden flex flex-col border-4 border-purpley-light relative">
     <!-- แถบหัวข้อปรับให้บางลง (py-2 px-4) -->
@@ -596,11 +600,12 @@ body {
       <!-- รูป QR Code ในกรอบเส้นปรุ -->
       <div class="bg-white p-2.5 rounded-2xl inline-block shadow-sm border-2 border-dashed border-purpley-dark/40">
         <img src="https://placehold.co/200x200/FFF0F5/B39DDB?text=QR+CODE" alt="QR Code" class="w-36 h-36 mx-auto object-contain">
-        <!-- ข้อความใต้รูป QR Code -->
-        <div class="mt-1.5 pt-1 border-t border-pinky-light text-center">
-          <p class="text-xs font-bold text-brown">ชื่อบัญชี “คนสวย” เท่านั้น</p>
-          <p class="text-[9px] text-purpley-dark font-medium mt-0.5">เช็คชื่อให้ดีก่อนโอน</p>
-        </div>
+      </div>
+
+      <!-- ข้อความชื่อบัญชี แยกออกมาอยู่ใต้กรอบรูป QR Code -->
+      <div class="-mt-1 text-center space-y-0.5">
+        <p class="text-xs font-bold text-brown">ชื่อบัญชี “คนสวย” เท่านั้น</p>
+        <p class="text-[9.5px] text-purpley-dark font-medium">เช็คชื่อบัญชีก่อนโอน</p>
       </div>
       
       <!-- รายละเอียดบัญชีธนาคาร (กรอบเส้นธรรมดา) -->
