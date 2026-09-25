@@ -20,7 +20,7 @@ tailwind.config = {
         sans: ['Mitr', 'sans-serif'],
       },
       colors: {
-        cream: '#FFF5F7', // พื้นหลังครีมอมชมพูพาสเทลสว่าง
+        cream: '#FFF5F7',
         pinky: {
           light: '#FFE4E1',
           DEFAULT: '#FFB6C1',
@@ -32,8 +32,8 @@ tailwind.config = {
           dark: '#E8A0BF'
         },
         brown: {
-          light: '#DB7093', // สีข้อความเนื้อหาปกติพาสเทล
-          DEFAULT: '#C76585', // สีหัวข้อที่ปรับให้อ่อนลง นุ่มนวลขึ้น
+          light: '#DB7093',
+          DEFAULT: '#C76585',
           dark: '#B05270'
         }
       },
@@ -91,7 +91,6 @@ body {
 .animate-float-reverse { animation: float-reverse 5s ease-in-out 1s infinite; }
 .animate-float-slow { animation: float-slow 6s ease-in-out infinite; }
 
-/* Animation สำหรับปุ่มเพลงดุ๊กดิ๊กตอนเล่นเพลง */
 @keyframes clef-bounce {
   0%, 100% { transform: scale(1) rotate(0deg); }
   50% { transform: scale(1.12) rotate(10deg); }
@@ -100,7 +99,6 @@ body {
   animation: clef-bounce 0.8s ease-in-out infinite;
 }
 
-/* Animation ตัวโน้ตดนตรีลอย */
 @keyframes note-float {
   0% {
     opacity: 1;
@@ -130,7 +128,7 @@ body {
 <!-- Audio Element สำหรับเพลงภูมิหลัง -->
 <audio id="bgMusic" loop src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
 
-<!-- ปุ่มเปิดเพลง สไตล์ชมพูพาสเทล (มุมซ้ายล่าง) -->
+<!-- ปุ่มเปิดเพลง -->
 <div class="fixed bottom-4 left-4 z-50">
   <button id="musicToggle" onclick="toggleMusic()" class="w-12 h-12 bg-white rounded-full p-1 shadow-md border-2 border-[#FFC2D1] flex items-center justify-center hover:scale-110 active:scale-95 transition-all group relative">
     <div class="w-full h-full rounded-full border-2 border-[#FFE5EC] bg-[#FFF0F5] flex items-center justify-center">
@@ -296,7 +294,6 @@ body {
 
     <!-- ปุ่มเช็คคิวงานข้างล่างแบรนเนอร์ -->
     <section class="space-y-3">
-      <!-- ซ่อนช่องสถานะคิวงานผ่าน CSS เพื่อไม่ให้ลบ HTML Element เดิม -->
       <div class="hidden bg-white border-2 border-pinky-light rounded-2xl p-4 shadow-sm items-center justify-between">
         <div class="flex items-center gap-2">
           <span class="relative flex h-3 w-3">
@@ -308,7 +305,6 @@ body {
         <span class="text-[10px] bg-pinky-light text-brown px-2 py-0.5 rounded-full font-medium">ว่าง 3 คิว</span>
       </div>
 
-      <!-- ปุ่มเช็คคิวงานแบบเส้นประ -->
       <a href="https://docs.google.com/spreadsheets/d/1-FdSIRlWdqaiypReK_ER95wd8PWxHJHZpHq2tXZRt6Q/edit?usp=drivesdk" target="_blank" class="w-full py-3 px-4 rounded-2xl border-2 border-dashed border-brown/70 bg-cream hover:bg-pinky-light/50 transition-colors flex items-center justify-center gap-2 text-brown font-medium text-sm shadow-sm group">
         <i data-lucide="calendar-check" class="w-5 h-5 text-brown group-hover:scale-110 transition-transform"></i>
         <span>เช็คคิวงานตรงนี้</span>
@@ -366,7 +362,6 @@ body {
         </p>
       </div>
 
-      <!-- ซ่อนส่วน "เซ็ต 3 เว็บสุดคุ้ม" ผ่าน CSS เพื่อไม่ให้ลบ HTML Element เดิม -->
       <div class="hidden bg-gradient-to-b from-white to-pinky-light/30 rounded-3xl shadow-card p-6 space-y-4 border-2 border-pinky-dark relative overflow-hidden mt-5">
         <div class="absolute top-0 right-0 bg-pinky-dark text-white text-[10px] px-3 py-1 rounded-bl-xl font-medium shadow-sm z-20">สุดคุ้ม!</div>
         <div class="flex items-end justify-between border-b border-dashed border-pinky-dark/40 pb-3 relative z-10">
@@ -396,7 +391,7 @@ body {
       </div>
     </section>
 
-    <!-- Rules & Process (แสดงคู่กัน 2 คอลัมน์) -->
+    <!-- Rules & Process -->
     <section class="space-y-2">
       <div class="grid grid-cols-2 gap-3.5">
         <!-- กรอบซ้าย: ขั้นตอน -->
@@ -434,13 +429,13 @@ body {
         </div>
       </div>
 
-      <!-- หมายเหตุลิขสิทธิ์เล็กๆ ด้านล่าง -->
+      <!-- หมายเหตุลิขสิทธิ์ -->
       <p class="text-[9.5px] text-brown-light text-center leading-relaxed px-2 italic pt-1">
         หมายเหตุ: งดนำป้ายไปขาย แจก ดัดแปลง หรือ เจน หรือเข้าระบบ Ai เพราะงานทุกชิ้นมีลิขสิทธิ์ หากตรวจพบการละเมิด ทางร้านขอดำเนินคดีตามกฎหมาย
       </p>
     </section>
 
-    <!-- ปุ่มช่องทางการโอนเงิน ข้างล่างขั้นตอน และกฎของร้าน -->
+    <!-- ปุ่มช่องทางการโอนเงิน -->
     <section>
       <button onclick="openPaymentModal()" class="w-full bg-white hover:bg-pinky-light/50 border-2 border-brown/70 text-brown py-3.5 px-5 rounded-2xl font-medium text-sm shadow-card flex items-center justify-between transition-all hover:scale-[1.02]">
         <div class="flex items-center gap-3">
@@ -453,42 +448,41 @@ body {
       </button>
     </section>
 
-    <!-- Work parts -->
+    <!-- Work parts (จัดวางข้อความให้อยู่ตรงกลางสมมาตรใต้ไอคอนเรียงลำดับใหม่) -->
     <section class="bg-white rounded-3xl p-5 border-2 border-dashed border-brown/40 shadow-sm text-center">
       <h3 class="font-medium text-brown text-sm flex items-center justify-center gap-1.5">
         <i data-lucide="sparkles" class="w-4 h-4 text-brown"></i> Work parts
       </h3>
-      <!-- ข้อความใต้หัวข้อ Work parts -->
       <p class="text-[10px] text-brown-light font-medium italic mt-0.5 mb-4">เลือกชิ้นส่วนประกอบงานตรงนี้</p>
 
       <div class="grid grid-cols-3 gap-3">
-        <!-- โพลารอยด์ 1 -->
-        <a href="https://drive.google.com/drive/folders/14eGRjufzjTVdgKFyZKAZL_Ucotuq3WIu?usp=drive_link" target="_blank" class="bg-white hover:bg-pinky-light/30 border border-brown/20 rounded-xl p-2 pb-2.5 shadow-polaroid flex flex-col items-center justify-between transition-all hover:scale-105 hover:-rotate-2 active:scale-95 group">
+        <!-- โพลารอยด์ 1: ˚₊‧꒰ა 𝘽𝙡𝙤𝙘𝙠 ໒꒱ ‧₊˚ -->
+        <a href="https://drive.google.com/drive/folders/14eGRjufzjTVdgKFyZKAZL_Ucotuq3WIu?usp=drive_link" target="_blank" class="bg-white hover:bg-pinky-light/30 border border-brown/20 rounded-xl p-2.5 shadow-polaroid flex flex-col items-center justify-center text-center transition-all hover:scale-105 hover:-rotate-2 active:scale-95 group">
           <div class="w-full aspect-square bg-cream rounded-lg border border-pinky-light flex items-center justify-center mb-2">
             <i data-lucide="dog" class="w-7 h-7 text-brown group-hover:text-brown-dark transition-colors"></i>
           </div>
-          <span class="text-[10px] font-medium text-brown group-hover:text-brown-dark transition-colors leading-tight px-1"> ̊+‧꒰ა Block ໒꒱ ‧+  ̊</span>
+          <span class="text-[10px] font-medium text-brown group-hover:text-brown-dark transition-colors leading-tight">˚₊‧꒰ა 𝘽𝙡𝙤𝙘𝙠 ໒꒱ ‧₊˚</span>
         </a>
 
-        <!-- โพลารอยด์ 2 -->
-        <a href="https://drive.google.com/drive/folders/1EfG87-_uhPZ9wCeZAtnV3FKJgdzJO57H?usp=drive_link" target="_blank" class="bg-white hover:bg-pinky-light/30 border border-brown/20 rounded-xl p-2 pb-2.5 shadow-polaroid flex flex-col items-center justify-between transition-all hover:scale-105 hover:rotate-2 active:scale-95 group">
+        <!-- โพลารอยด์ 2: ˚₊‧꒰ა 𝙏𝙤𝙤𝙣 ໒꒱ ‧₊˚ -->
+        <a href="https://drive.google.com/drive/folders/1EfG87-_uhPZ9wCeZAtnV3FKJgdzJO57H?usp=drive_link" target="_blank" class="bg-white hover:bg-pinky-light/30 border border-brown/20 rounded-xl p-2.5 shadow-polaroid flex flex-col items-center justify-center text-center transition-all hover:scale-105 hover:rotate-2 active:scale-95 group">
           <div class="w-full aspect-square bg-cream rounded-lg border border-pinky-light flex items-center justify-center mb-2">
             <i data-lucide="cat" class="w-7 h-7 text-brown group-hover:text-brown-dark transition-colors"></i>
           </div>
-          <span class="text-[10px] font-medium text-brown group-hover:text-brown-dark transition-colors leading-tight px-1"> ̊+‧꒰ა Toon ໒꒱ ‧+  ̊</span>
+          <span class="text-[10px] font-medium text-brown group-hover:text-brown-dark transition-colors leading-tight">˚₊‧꒰ა 𝙏𝙤𝙤𝙣 ໒꒱ ‧₊˚</span>
         </a>
 
-        <!-- โพลารอยด์ 3 -->
-        <a href="https://drive.google.com/drive/folders/1TPvtkQKp89HgEYJCHPVzOlMqwElLID9Y?usp=drive_link" target="_blank" class="bg-white hover:bg-pinky-light/30 border border-brown/20 rounded-xl p-2 pb-2.5 shadow-polaroid flex flex-col items-center justify-between transition-all hover:scale-105 hover:-rotate-2 active:scale-95 group">
+        <!-- โพลารอยด์ 3: ˚₊‧꒰ა 𝘿𝙚𝙨𝙘𝙤 ໒꒱ ‧₊˚ -->
+        <a href="https://drive.google.com/drive/folders/1TPvtkQKp89HgEYJCHPVzOlMqwElLID9Y?usp=drive_link" target="_blank" class="bg-white hover:bg-pinky-light/30 border border-brown/20 rounded-xl p-2.5 shadow-polaroid flex flex-col items-center justify-center text-center transition-all hover:scale-105 hover:-rotate-2 active:scale-95 group">
           <div class="w-full aspect-square bg-cream rounded-lg border border-pinky-light flex items-center justify-center mb-2">
             <i data-lucide="piggy-bank" class="w-7 h-7 text-brown group-hover:text-brown-dark transition-colors"></i>
           </div>
-          <span class="text-[10px] font-medium text-brown group-hover:text-brown-dark transition-colors leading-tight px-1"> ̊+‧꒰ა Descor ໒꒱ ‧+  ̊</span>
+          <span class="text-[10px] font-medium text-brown group-hover:text-brown-dark transition-colors leading-tight">˚₊‧꒰ა 𝘿𝙚𝙨𝙘𝙤 ໒꒱ ‧₊˚</span>
         </a>
       </div>
     </section>
 
-    <!-- ซ่อนส่วน Web Course ผ่าน CSS เพื่อไม่ให้ลบ HTML Element เดิม -->
+    <!-- ซ่อนส่วน Web Course -->
     <section class="hidden bg-white rounded-3xl p-6 text-center relative shadow-card border-2 border-purpley/50">
       <svg class="absolute -left-3 -top-3 w-10 h-10 text-brown opacity-30 -rotate-12 z-20" viewBox="0 0 24 24"><use href="#icon-teddy"></use></svg>
       <svg class="absolute right-4 bottom-4 w-10 h-10 rotate-45 opacity-30" viewBox="0 0 100 100"><use href="#icon-button"></use></svg>
@@ -510,7 +504,7 @@ body {
       </div>
     </section>
 
-    <!-- ซ่อนส่วน Goodnotes ทั้งหมดผ่าน CSS เพื่อไม่ให้ลบ HTML Element เดิม -->
+    <!-- ซ่อนส่วน Goodnotes -->
     <section class="hidden relative">
       <h2 class="text-xl font-medium mb-5 flex items-center gap-2 border-b-2 border-pinky-light pb-2 mt-8 text-brown">
         <i data-lucide="pen-tool" class="w-5 h-5 text-pinky-dark"></i>
@@ -584,7 +578,6 @@ body {
           LINE
         </a>
       </div>
-      <!-- ซ่อนปุ่ม Instagram ผ่าน CSS เพื่อไม่ให้ลบ HTML Element เดิม -->
       <a href="https://www.instagram.com/pinkjulie.land" target="_blank" class="hidden w-[140px] bg-[#E8A0BF] text-white py-3 rounded-full text-[11px] font-bold tracking-wider hover:-translate-y-1 transition-transform shadow-md flex justify-center items-center uppercase">
         INSTAGRAM
       </a>
@@ -621,7 +614,6 @@ body {
 <!-- Modal Payment -->
 <div id="paymentModal" class="modal fixed inset-0 z-[100] flex items-center justify-center bg-brown-dark/30 backdrop-blur-sm invisible opacity-0 p-4">
   <div class="modal-content bg-white w-full max-w-[90vw] sm:max-w-sm rounded-[30px] shadow-2xl overflow-hidden flex flex-col border-4 border-pinky-light relative">
-    <!-- แถบหัวข้อ -->
     <div class="py-2.5 px-4 flex justify-between items-center bg-pinky-light border-b border-pinky/40 relative">
       <h3 class="font-medium text-sm flex items-center gap-2 text-brown">
         <i data-lucide="qr-code" class="w-4 h-4 text-brown"></i>
@@ -633,18 +625,15 @@ body {
     </div>
     
     <div class="p-4 text-center bg-cream space-y-3 max-h-[75vh] overflow-y-auto">
-      <!-- รูป QR Code -->
       <div class="bg-white p-2.5 rounded-2xl inline-block shadow-sm border-2 border-dashed border-brown/40">
         <img src="https://placehold.co/200x200/FFE4E1/C76585?text=QR+CODE" alt="QR Code" class="w-36 h-36 mx-auto object-contain">
       </div>
 
-      <!-- ข้อความชื่อบัญชี อยู่ใต้กรอบรูป QR Code -->
       <div class="-mt-1 text-center space-y-0.5">
         <p class="text-xs font-medium text-brown">ชื่อบัญชี “คนสวย” เท่านั้น</p>
         <p class="text-[9.5px] text-brown-light font-medium">เช็คชื่อบัญชีก่อนโอน</p>
       </div>
       
-      <!-- รายละเอียดบัญชีธนาคาร -->
       <div class="bg-white p-2.5 rounded-2xl border border-brown/30 text-left space-y-1 shadow-sm">
         <div class="flex items-center gap-1.5">
           <i data-lucide="building-2" class="w-3.5 h-3.5 text-brown"></i>
@@ -659,7 +648,6 @@ body {
         <p class="text-[10px] text-brown-light font-medium">ชื่อบัญชี: คนสวย</p>
       </div>
 
-      <!-- TrueMoney Wallet -->
       <div class="bg-white p-2.5 rounded-2xl border border-brown/30 text-left space-y-1 shadow-sm">
         <div class="flex items-center gap-1.5">
           <i data-lucide="wallet" class="w-3.5 h-3.5 text-brown"></i>
@@ -674,7 +662,6 @@ body {
         <p class="text-[10px] text-brown-light font-medium">ชื่อบัญชี: คนสวย</p>
       </div>
 
-      <!-- กรอบกำกับโน้ตสลิป + ข้อความหมายเหตุ -->
       <div class="space-y-1 pt-0.5">
         <div class="bg-white p-2.5 rounded-2xl border border-brown/30 text-left space-y-1 shadow-sm">
           <div class="flex items-center gap-1.5">
@@ -699,10 +686,8 @@ body {
 
 <!-- Data & Scripts -->
 <script>
-// Initialize Icons
 lucide.createIcons();
 
-// Portfolio Data
 const portfolioData = {
   bright: {
     title: "ตัวอย่างงาน โทนสดใส",
@@ -798,14 +783,12 @@ function closeModal(modalId) {
   }, 300);
 }
 
-// Close modal on outside click
 [portfolioModal, paymentModal].forEach(m => {
   m.addEventListener('click', function(e) {
     if (e.target === m) closeModal(m.id);
   });
 });
 
-// Music Toggle Logic
 let isPlaying = false;
 let noteInterval = null;
 
